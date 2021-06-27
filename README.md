@@ -8,3 +8,15 @@ We request you to use your skills to create a website from scratch and host it:
 - Once logged out, the session should be handled correctly
 - For frontend, you can use flask templates and a simple html page.
 - Finally this should be deployed online and should be accessible online (no domain required)
+
+### Installation
+
+Get up and running with `make deploy`:
+
+```shell
+$ git clone https://github.com/bhargav333/NimbleBoxAssignment.git
+$ cd NimbleBoxAssignment
+$ make deploy
+``` 
+
+-----

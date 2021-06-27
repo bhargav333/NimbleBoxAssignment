@@ -1,5 +1,6 @@
 from os import environ, path
 from dotenv import load_dotenv
+import redis
 
 basedir = path.abspath(path.dirname(__name__))
 load_dotenv(path.join(basedir,".env"))
@@ -23,6 +24,10 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI')
     SQLALCHEMY_ECHO = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    # Flask-Session
+    SESSION_TYPE = environ.get('SESSION_TYPE')
+    SESSION_REDIS = redis.from_url(environ.get('SESSION_REDIS'))
 
 class ProductionConfig(Config):
     DEVELOPMENT = False
