@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 basedir = path.abspath(path.dirname(__name__))
 load_dotenv(path.join(basedir,".env"))
-print(basedir)
+
 class Config(object):
     """Set Flask configuration from .env file."""
     # General Config
