@@ -15,11 +15,10 @@ main_bp = Blueprint(
 def dashboard():
     """Logged-in User Dashboard."""
     return render_template(
-        'dashboard.jinja2',
+        'stock.jinja2',
         title='StockApp',
-        template='dashboard-template',
-        current_user=current_user,
-        body="You are now logged in!"
+        template='stock-template',
+        current_user=current_user
     )
 
 

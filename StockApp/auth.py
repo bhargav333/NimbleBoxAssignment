@@ -55,7 +55,7 @@ def login():
     # main_bp.dashboard
     # Bypass if user is logged in
     if current_user.is_authenticated:
-        return redirect(url_for('main_bp.dasboard'))  
+        return redirect(url_for('main_bp.dashboard'))  
 
     form = LoginForm()
     # Validate login attempt
