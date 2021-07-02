@@ -6,7 +6,6 @@ from .models import User, db
 from . import login_manager
 from .forms import LoginForm, SignupForm
 
-
 # Blueprint Configuration
 stock_bp = Blueprint(
     'stock_bp', __name__,
@@ -41,6 +40,8 @@ def display_history():
 	#use the quote to pull the historical data from Yahoo finance
 	hist = quote.history(period=period, interval=interval)
 	#convert the historical data to JSON
+	hist.reset_index(inplace=True)
+
 	data = hist.to_json()
 	#return the JSON in the HTTP response
 	return data

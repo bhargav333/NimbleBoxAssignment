@@ -1,6 +1,6 @@
 from os import environ, path
 from dotenv import load_dotenv
-import redis
+# import redis
 
 basedir = path.abspath(path.dirname(__name__))
 load_dotenv(path.join(basedir,".env"))
